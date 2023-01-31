@@ -4,7 +4,7 @@
 TOP - Binary Search Trees project  
 
 ## Live
-https://jundran.github.io/binary-search-trees
+https://replit.com/@jundran/binary-search-trees#index.js
 
 ## Requirements
 https://www.theodinproject.com/lessons/javascript-binary-search-trees

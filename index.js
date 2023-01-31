@@ -1,5 +1,5 @@
 import Tree from './tree.js'
-function randomArray(n) {
+function randomArray (n) {
 	const numbers = []
 	for (let i = 0; i < n; i++) {
 		numbers.push(Math.floor(Math.random() * 1000))
@@ -7,13 +7,11 @@ function randomArray(n) {
 	return numbers
 }
 
+const traversalFunction = node => process.stdout.write(node.data + ' ')
 const array = [1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]
-const tree = Tree(array)
 console.log('----- Build and print tree -----')
+const tree = Tree(array)
 tree.prettyPrint()
-
-// const traversalFunction = node => process.stdout.write(node.data + ' ')
-const traversalFunction = node => console.log(node.data + ' ')
 
 // ----- Breadth-first traversal: Level order -----
 console.log('\n----- Breadth-first traversal: Level order -----')

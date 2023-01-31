@@ -21,7 +21,7 @@ export default function Tree (array) {
 	function buildTree (array = array) {
 		const middle = Math.floor(array.length / 2)
 		const node = array.length ? Node(array[middle]) : null
-		if(array.length > 1) {
+		if (array.length > 1) {
 			node.left = buildTree(array.slice(0, middle))
 			node.right = buildTree(array.slice(middle + 1))
 		}
@@ -89,15 +89,6 @@ export default function Tree (array) {
 		if (node.left !== null) {
 			prettyPrint(node.left, `${prefix}${isLeft ? '    ' : '│   '}`, true)
 		}
-	}
-
-	function find (value) {
-		let node = null
-		function callback (n) {
-			if (n.data === value) node = n
-		}
-		levelOrder(callback)
-		return node
 	}
 
 	function find (value, node = rootNode) {
@@ -184,7 +175,7 @@ export default function Tree (array) {
 		return node === rootNode ? nodeBalanced : result
 	}
 
-	function rebalance() {
+	function rebalance () {
 		// Any traversal method can be passed in
 		rootNode = buildTree(inOrder())
 	}
